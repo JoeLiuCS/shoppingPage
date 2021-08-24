@@ -1,0 +1,78 @@
+*{ /*Set everything in box*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.notificationBar{ /* put text in center,text (padding) to boundary 10 pixels,No margin */
+    /*Layout*/
+    text-align: center;
+    padding: 10px;
+
+    /*Styling*/
+    font-style: italic;
+    color: white;
+    background: black;
+}
+
+.navbar{ /* flexbox layout, put all in center, margin to boundary 10px */
+         /* Item: logo Image, navigation bar,search button,cart button */
+    display: flex;
+    align-items: center;
+    margin: 10px; /*outside border margin 10px*/
+}
+
+nav{  /* Menu bar will take all the free space in .navbar */
+    flex: 1 0 0; /*Flex grow, No shrink and basis*/
+    margin: 5px; /*space between other item is 5px*/
+}
+
+nav ul li{ /* No style for list, all items with space 10px, setting in left */
+    /*Layout*/
+    float: left;
+    margin: 10px;
+
+    /*Styling*/
+    list-style-type:none;
+}
+nav ul li:hover{ /* Hover add clay, set at bottom, width is based on size of the text, no-repeat*/
+    background-image: url("image/line-clay-bg.svg");
+    background-size: 100% 4px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+
+nav ul li:last-child{ /* last item button goes the end */
+    float: right;
+}
+
+#searchButton,#cartButton{ /*Two buttons with space 5px*/
+    margin: 5px;
+}
+
+
+.introItems{ /*Include introimage and introText1 */
+    margin: 10px;  /*outside border margin 10px*/
+}
+
+#introImage{
+    margin: 5px; /*Item margin 5px*/
+}
+
+#introText1{
+    margin: 5px; /*Item margin 5px*/
+    text-align: center;
+    font-weight: bold;
+}
+
+
+a{ /* Remove the bottom scratch line from all a>href */
+    /* all the achors colors*/
+    text-decoration: none;
+    color: #555;
+}
+
+p{ /* all the achors colors*/
+    color: #555;
+}
