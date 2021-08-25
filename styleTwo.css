@@ -70,7 +70,9 @@ body{
     margin: 5px;
 }
 
-.navbar-textMenu-list-item-subMenuBag{ /*subMenu - 1*/
+.navbar-textMenu-list-item-subMenuBag,
+.navbar-textMenu-list-item-subMenuAccessories,
+.navbar-textMenu-list-item-subMenuExperience{ /*subMenu */
     display: none;/* Does not display when it is not hover*/
     position: absolute; /*position based on list item*/
 
@@ -79,7 +81,10 @@ body{
 
     width: 100%; /* 100% size from the parent navbar*/
 }
-.navbar-textMenu-list-item:hover .navbar-textMenu-list-item-subMenuBag{ /* When hover active, submenu display*/
+.navbar-textMenu-list-item:hover .navbar-textMenu-list-item-subMenuBag,
+.navbar-textMenu-list-item:hover .navbar-textMenu-list-item-subMenuAccessories,
+.navbar-textMenu-list-item:hover .navbar-textMenu-list-item-subMenuExperience
+{ /* When hover active, submenu display*/
     display: flex; /*Flex layout*/
     align-items: center; /*Cross axis center (Y) */
     justify-content: center;/*Main axis center (X)*/
@@ -91,22 +96,31 @@ body{
     /*margin-top: 30px; !*sub menu 30 px away from the list*!*/
 }
 
-.navbar-textMenu-list-item-subMenuBag-subTitle1,.navbar-textMenu-list-item-subMenuBag-subTitle2{
+.navbar-textMenu-list-item-subMenuBag-subTitle1,
+.navbar-textMenu-list-item-subMenuBag-subTitle2,
+.navbar-textMenu-list-item-subMenuAccessories-subTitle1{
     margin: 20px; /* giving the space between the lists*/
 }
 
-.navbar-textMenu-list-item-subMenuBag-subTitle1-list, .navbar-textMenu-list-item-subMenuBag-subTitle2-list{
+.navbar-textMenu-list-item-subMenuBag-subTitle1-list,
+.navbar-textMenu-list-item-subMenuBag-subTitle2-list,
+.navbar-textMenu-list-item-subMenuAccessories-subTitle1-list{
     display: inline-block; /* Make it vertical direction*/
 }
 
-.navbar-textMenu-list-item-subMenuBag-subTitle1-list-item,.navbar-textMenu-list-item-subMenuBag-subTitle2-list-item{
+.navbar-textMenu-list-item-subMenuBag-subTitle1-list-item,
+.navbar-textMenu-list-item-subMenuBag-subTitle2-list-item,
+.navbar-textMenu-list-item-subMenuAccessories-subTitle1-list-item{
     float: left; /* float all items in left, then use clear to create new line for each item*/
     clear: both;
     margin: 10px; /* row with space 10 pixels */
     list-style-type:none;
 }
 
-
+#navbar-textMenu-list-item-subMenuExperience-image1,
+#navbar-textMenu-list-item-subMenuExperience-image2{
+    margin: 5px;
+}
 
 
 /* --------------------------------------  IntroItem (Middium items) ---------------------------------------------- */
