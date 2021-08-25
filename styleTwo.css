@@ -28,12 +28,12 @@ body{
     position: relative; /* set up for sub-menu bar with using absolute position, this is parents*/
 }
 
-nav{  /* Menu bar will take all the free space in .navbar */
+.navbar-textMenu{  /* Menu bar will take all the free space in .navbar */
     flex: 1 0 0; /*Flex grow, No shrink and basis*/
     margin: 5px; /*space between other item is 5px*/
 }
 
-nav ul li{ /* No style for list, all items with space 10px, setting in left */
+.navbar-textMenu-list-item{ /* No style for list, all items with space 10px, setting in left */
     /*Layout*/
     float: left;
     margin: 10px;
@@ -41,7 +41,7 @@ nav ul li{ /* No style for list, all items with space 10px, setting in left */
     /*Styling*/
     list-style-type:none;
 }
-nav ul li:hover{ /* Hover add clay, set at bottom, width is based on size of the text, no-repeat*/
+.navbar-textMenu-list-item:hover{ /* Hover add clay, set at bottom, width is based on size of the text, no-repeat*/
     background-image: url("image/line-clay-bg.svg");
     background-size: 100% 4px;
     background-position: bottom;
@@ -49,15 +49,15 @@ nav ul li:hover{ /* Hover add clay, set at bottom, width is based on size of the
 }
 
 
-nav ul li:last-child{ /* last item button goes the end */
+.navbar-textMenu-list-item:last-child{ /* last item button goes the end */
     float: right;
 }
 
-#searchButton,#cartButton{ /*Two buttons with space 5px*/
+#navbar-searchButton,#navbar-cartButton{ /*Two buttons with space 5px*/
     margin: 5px;
 }
 
-.subMenu-bag{ /*subMenu - 1*/
+.navbar-textMenu-list-item-subMenuBag{ /*subMenu - 1*/
     display: none;/* Does not display when it is not hover*/
     position: absolute; /*position based on list item*/
 
@@ -66,7 +66,7 @@ nav ul li:last-child{ /* last item button goes the end */
 
     width: 100%; /* 100% size from the parent navbar*/
 }
-nav ul li:hover .subMenu-bag{ /* When hover active, submenu display*/
+.navbar-textMenu-list-item:hover .navbar-textMenu-list-item-subMenuBag{ /* When hover active, submenu display*/
     display: flex; /*Flex layout*/
     align-items: center; /*Cross axis center (Y) */
     justify-content: center;/*Main axis center (X)*/
@@ -78,23 +78,24 @@ nav ul li:hover .subMenu-bag{ /* When hover active, submenu display*/
     /*margin-top: 30px; !*sub menu 30 px away from the list*!*/
 }
 
-.subTitle_1,.subTitle_2{
+.navbar-textMenu-list-item-subMenuBag-subTitle1,.navbar-textMenu-list-item-subMenuBag-subTitle2{
     margin: 20px;
 }
 
-.subTitle_1 h1{
+.navbar-textMenu-list-item-subMenuBag-subTitle1{
+    align-items: center;
     justify-content: center;
 }
 
-.subTitle_1 ul, .subTitle_2 ul{
-
+.navbar-textMenu-list-item-subMenuBag-subTitle1-list, .navbar-textMenu-list-item-subMenuBag-subTitle2-list{
     display: inline-block;
-    /*display: block;*/
 }
 
-.subTitle_1 li,.subTitle_2 li{
+.navbar-textMenu-list-item-subMenuBag-subTitle1-list-item,.navbar-textMenu-list-item-subMenuBag-subTitle2-list-item{
     float: left;
     clear: both;
+    margin: 10px;
+    list-style-type:none;
 }
 
 
@@ -105,13 +106,13 @@ nav ul li:hover .subMenu-bag{ /* When hover active, submenu display*/
     margin: 10px;  /*outside border margin 10px*/
 }
 
-#introImage{
+#introItems-Image{
     margin: 5px; /*Item margin 5px*/
     width: 100%;
     height: auto;
 }
 
-#introText1{
+#introItems-Text1{
     margin: 5px; /*Item margin 5px*/
     text-align: center;
     font-weight: bold;
@@ -126,10 +127,10 @@ footer { /* put text in center,text (padding) to boundary 10 pixels,No margin */
     font-style: italic;
     background: black;
 }
-footer a{
+.footer_bar{
     color: white;
 }
-footer a:active{
+.footer_bar:active{
     text-decoration: underline;
 }
 /* -----------------------------------------Global Styling---------------------------------------------------- */
