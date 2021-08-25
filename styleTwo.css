@@ -9,6 +9,19 @@ body{
     background-size: 20%; /* making 10% size of pictures to fill up background*/
 }
 /* ---------------------------------------  TopBar  ----------------------------------------------------- */
+#goTopButton{ /* go top button */
+    background-color: orange;
+    border-radius: 20px;  /* make a small radius*/
+
+    width: 50px;
+    height: 50px;
+    position: fixed; /* Position is fixed no matter the screen moving*/
+    bottom: 30px;  /* away from bottom 30 pixels*/
+    right: 30px;   /* away from right 30 pixels */
+
+    text-align: center; /* put text in center*/
+    padding-top: 15px;
+}
 .notificationBar{ /* put text in center,text (padding) to boundary 10 pixels,No margin */
     /*Layout*/
     text-align: center;
@@ -79,22 +92,17 @@ body{
 }
 
 .navbar-textMenu-list-item-subMenuBag-subTitle1,.navbar-textMenu-list-item-subMenuBag-subTitle2{
-    margin: 20px;
-}
-
-.navbar-textMenu-list-item-subMenuBag-subTitle1{
-    align-items: center;
-    justify-content: center;
+    margin: 20px; /* giving the space between the lists*/
 }
 
 .navbar-textMenu-list-item-subMenuBag-subTitle1-list, .navbar-textMenu-list-item-subMenuBag-subTitle2-list{
-    display: inline-block;
+    display: inline-block; /* Make it vertical direction*/
 }
 
 .navbar-textMenu-list-item-subMenuBag-subTitle1-list-item,.navbar-textMenu-list-item-subMenuBag-subTitle2-list-item{
-    float: left;
+    float: left; /* float all items in left, then use clear to create new line for each item*/
     clear: both;
-    margin: 10px;
+    margin: 10px; /* row with space 10 pixels */
     list-style-type:none;
 }
 
@@ -141,4 +149,7 @@ a{ /* Remove the bottom scratch line from all a>href */
 }
 p{ /* all the achors colors*/
     color: #555;
+}
+html{ /* slowly scrolling*/
+    scroll-behavior: smooth;
 }
