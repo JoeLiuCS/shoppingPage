@@ -118,8 +118,12 @@ body{
 }
 
 #navbar-textMenu-list-item-subMenuExperience-image1,
-#navbar-textMenu-list-item-subMenuExperience-image2{
-    margin: 5px;
+#navbar-textMenu-list-item-subMenuExperience-image2,
+#navbar-textMenu-list-item-subMenuBag-image1,
+#navbar-textMenu-list-item-subMenuAccessories-image1{
+    margin: 5px; /* Third submenu, picture margin 5 pixels away*/
+    width: 40%;
+    height: auto;
 }
 
 
