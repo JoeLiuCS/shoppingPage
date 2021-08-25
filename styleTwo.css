@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: url("image/dropdown_bg.jpg");
+    background-size: 20%; /* making 10% size of pictures to fill up background*/
+}
+/* ---------------------------------------  TopBar  ----------------------------------------------------- */
 .notificationBar{ /* put text in center,text (padding) to boundary 10 pixels,No margin */
     /*Layout*/
     text-align: center;
@@ -14,12 +19,13 @@
     color: white;
     background: black;
 }
-
+/* ---------------------------------------  Navigation Bar  ----------------------------------------------------- */
 .navbar{ /* flexbox layout, put all in center, margin to boundary 10px */
          /* Item: logo Image, navigation bar,search button,cart button */
     display: flex;
     align-items: center;
     margin: 10px; /*outside border margin 10px*/
+    position: relative; /* set up for sub-menu bar with using absolute position, this is parents*/
 }
 
 nav{  /* Menu bar will take all the free space in .navbar */
@@ -51,13 +57,58 @@ nav ul li:last-child{ /* last item button goes the end */
     margin: 5px;
 }
 
+.subMenu-bag{ /*subMenu - 1*/
+    display: none;/* Does not display when it is not hover*/
+    position: absolute; /*position based on list item*/
 
+    top: 100%; /* 100% away from top*/
+    left: 5px; /* 5 pixels away from left*/
+
+    width: 100%; /* 100% size from the parent navbar*/
+}
+nav ul li:hover .subMenu-bag{ /* When hover active, submenu display*/
+    display: flex; /*Flex layout*/
+    align-items: center; /*Cross axis center (Y) */
+    justify-content: center;/*Main axis center (X)*/
+    padding: 10px; /*padding space with 10px*/
+
+    background-image: url("image/sub_menuBackimg.jpeg");
+    background-size: cover;
+
+    /*margin-top: 30px; !*sub menu 30 px away from the list*!*/
+}
+
+.subTitle_1,.subTitle_2{
+    margin: 20px;
+}
+
+.subTitle_1 h1{
+    justify-content: center;
+}
+
+.subTitle_1 ul, .subTitle_2 ul{
+
+    display: inline-block;
+    /*display: block;*/
+}
+
+.subTitle_1 li,.subTitle_2 li{
+    float: left;
+    clear: both;
+}
+
+
+
+
+/* --------------------------------------  IntroItem (Middium items) ---------------------------------------------- */
 .introItems{ /*Include introimage and introText1 */
     margin: 10px;  /*outside border margin 10px*/
 }
 
 #introImage{
     margin: 5px; /*Item margin 5px*/
+    width: 100%;
+    height: auto;
 }
 
 #introText1{
@@ -65,14 +116,28 @@ nav ul li:last-child{ /* last item button goes the end */
     text-align: center;
     font-weight: bold;
 }
+/* ---------------------------------------  Footer  ----------------------------------------------------- */
+footer { /* put text in center,text (padding) to boundary 10 pixels,No margin */
+    /*Layout*/
+    text-align: center;
+    padding: 10px;
 
-
+    /*Styling*/
+    font-style: italic;
+    background: black;
+}
+footer a{
+    color: white;
+}
+footer a:active{
+    text-decoration: underline;
+}
+/* -----------------------------------------Global Styling---------------------------------------------------- */
 a{ /* Remove the bottom scratch line from all a>href */
     /* all the achors colors*/
     text-decoration: none;
     color: #555;
 }
-
 p{ /* all the achors colors*/
     color: #555;
 }
