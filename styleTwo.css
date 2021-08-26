@@ -165,31 +165,67 @@ body{
     width: auto;
     height: auto;
 }
-/*.imageContainer-gallery-image1{*/
-/*    grid-area: img-1;*/
-/*    background-image: url("image/cars.jpg");*/
-/*    background-size: cover;*/
-/*    background-repeat: no-repeat;*/
-/*    background-position: center;*/
-/*}*/
-.imageContainer-gallery-image1{
-    width: 100%;
-    height: 100%;
-}
 .imageContainer-gallery-temp1{
     grid-area: img-1;
     position: relative;
 }
-.imageContainer-gallery-temp1-overlay{
+
+.imageContainer-gallery-temp2{
+    grid-area: img-2;
+    position: relative;
+}
+
+.imageContainer-gallery-temp3{
+    grid-area: img-3;
+    position: relative;
+}
+
+.imageContainer-gallery-temp4{
+    grid-area: img-4;
+    position: relative;
+}
+
+.imageContainer-gallery-temp5{
+    grid-area: img-5;
+    position: relative;
+}
+
+.imageContainer-gallery-temp6{
+    grid-area: img-6;
+    position: relative;
+}
+
+.imageContainer-gallery-temp7{
+    grid-area: img-7;
+    position: relative;
+}
+/*---------------------------------------------------*/
+.imageContainer-gallery-temp1-image1,
+.imageContainer-gallery-temp2-image2,
+.imageContainer-gallery-temp3-image3,
+.imageContainer-gallery-temp4-image4,
+.imageContainer-gallery-temp5-image5,
+.imageContainer-gallery-temp6-image6,
+.imageContainer-gallery-temp7-image7{
+    width: 100%;
+    height: 100%;
+}
+
+.imageContainer-gallery-temp1-overlay,
+.imageContainer-gallery-temp2-overlay,
+.imageContainer-gallery-temp3-overlay,
+.imageContainer-gallery-temp4-overlay,
+.imageContainer-gallery-temp5-overlay,
+.imageContainer-gallery-temp6-overlay,
+.imageContainer-gallery-temp7-overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
 
     background-color: rgba(0,0,0,0.6);
     color: #ffffff;
-
-    position: absolute;
-    left: 0;
-    top: 0;
 
     display: flex;
     flex-direction: column;
@@ -198,82 +234,28 @@ body{
     opacity: 0;
     transition: opacity 0.3s;
 }
-.imageContainer-gallery-temp1-overlay-innerImage{
-    width: 80%;
-    height: 80%;
-}
-.imageContainer-gallery-temp1-overlay:hover{
+
+.imageContainer-gallery-temp1-overlay:hover,
+.imageContainer-gallery-temp2-overlay:hover,
+.imageContainer-gallery-temp3-overlay:hover,
+.imageContainer-gallery-temp4-overlay:hover,
+.imageContainer-gallery-temp5-overlay:hover,
+.imageContainer-gallery-temp6-overlay:hover,
+.imageContainer-gallery-temp7-overlay:hover{
     opacity: 1;
 }
 
-/*.imageContainer-gallery-image2{*/
-/*    grid-area: img-2;*/
-/*    background-image: url("image/games.jpg");*/
-/*    background-size: cover;*/
-/*    background-repeat: no-repeat;*/
-/*    background-position: center;*/
-/*}*/
-.imageContainer-gallery-image2{
-    grid-area: img-2;
-    width: 100%;
-    height: 100%;
+.imageContainer-gallery-temp1-overlay-innerImage,
+.imageContainer-gallery-temp2-overlay-innerImage,
+.imageContainer-gallery-temp3-overlay-innerImage,
+.imageContainer-gallery-temp4-overlay-innerImage,
+.imageContainer-gallery-temp5-overlay-innerImage,
+.imageContainer-gallery-temp6-overlay-innerImage,
+.imageContainer-gallery-temp7-overlay-innerImage{
+    width: 80%;
+    height: 80%;
 }
-/*.imageContainer-gallery-image3{*/
-/*    grid-area: img-3;*/
-/*    background-image: url("image/steak.jpg");*/
-/*    background-size: cover;*/
-/*    background-repeat: no-repeat;*/
-/*    background-position: center;*/
-/*}*/
-.imageContainer-gallery-image3{
-    grid-area: img-3;
-    width: 100%;
-    height: 100%;
-}
-/*.imageContainer-gallery-image4{*/
-/*    grid-area: img-4;*/
-/*    background-image: url("image/tiffany_and_co_ring.jpg");*/
-/*    background-size: cover;*/
-/*    background-repeat: no-repeat;*/
-/*    background-position: center;*/
-/*}*/
-.imageContainer-gallery-image4{
-    grid-area: img-4;
-    width: 100%;
-    height: 100%;
-}
-/*.imageContainer-gallery-image5{*/
-/*    grid-area: img-5;*/
-/*    background-image: url("image/sea.jpg");*/
-/*    background-size: cover;*/
-/*    background-repeat:no-repeat;*/
-/*    background-position: center;*/
-/*}*/
-.imageContainer-gallery-image5{
-    grid-area: img-5;
-    width: 100%;
-    height: 100%;
-}
-/*.imageContainer-gallery-image6{*/
-/*    grid-area: img-6;*/
-/*    background-image: url("image/guns.jpg");*/
-/*    background-size: cover;*/
-/*}*/
-.imageContainer-gallery-image6{
-    grid-area: img-6;
-    width: 100%;
-    height: 100%;
-}
-/*.imageContainer-gallery-image7{*/
-/*    grid-area: img-7;*/
-/*    background-image: url("image/jocker.jpg");*/
-/*    background-size: cover;*/
-/*}*/
-.imageContainer-gallery-image7{
-    grid-area: img-7;
-    width: 100%;
-    height: 100%;
-}
+
 /* ----------------- ----------------------  Footer  ----------------------------------------------------- */
 footer { /* put text in center,text (padding) to boundary 10 pixels,No margin */
     /*Layout*/
