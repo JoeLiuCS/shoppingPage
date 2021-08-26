@@ -18,6 +18,7 @@ body{
     position: fixed; /* Position is fixed no matter the screen moving*/
     bottom: 30px;  /* away from bottom 30 pixels*/
     right: 30px;   /* away from right 30 pixels */
+    z-index: 2; /* Make this button always on the top*/
 
     text-align: center; /* put text in center*/
     padding-top: 15px;
@@ -147,7 +148,6 @@ body{
 .imageContainer{
     margin: 10px;
 
-
 }
 .imageContainer-gallery{
     display: grid;
@@ -162,53 +162,117 @@ body{
                          'img-4 img-7 img-2'
                          'img-4 img-3 img-3'
                          'img-4 img-3 img-3';
-    width: 100%;
-    height: 2000px;
+    width: auto;
+    height: auto;
 }
+/*.imageContainer-gallery-image1{*/
+/*    grid-area: img-1;*/
+/*    background-image: url("image/cars.jpg");*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: center;*/
+/*}*/
 .imageContainer-gallery-image1{
-    grid-area: img-1;
-    background-image: url("image/cars.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    width: 100%;
+    height: 100%;
 }
+.imageContainer-gallery-temp1{
+    grid-area: img-1;
+    position: relative;
+}
+.imageContainer-gallery-temp1-overlay{
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.6);
+    color: #ffffff;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.imageContainer-gallery-temp1-overlay-innerImage{
+    width: 80%;
+    height: 80%;
+}
+.imageContainer-gallery-temp1-overlay:hover{
+    opacity: 1;
+}
+
+/*.imageContainer-gallery-image2{*/
+/*    grid-area: img-2;*/
+/*    background-image: url("image/games.jpg");*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: center;*/
+/*}*/
 .imageContainer-gallery-image2{
     grid-area: img-2;
-    background-image: url("image/games.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    width: 100%;
+    height: 100%;
 }
+/*.imageContainer-gallery-image3{*/
+/*    grid-area: img-3;*/
+/*    background-image: url("image/steak.jpg");*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: center;*/
+/*}*/
 .imageContainer-gallery-image3{
     grid-area: img-3;
-    background-image: url("image/steak.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    width: 100%;
+    height: 100%;
 }
+/*.imageContainer-gallery-image4{*/
+/*    grid-area: img-4;*/
+/*    background-image: url("image/tiffany_and_co_ring.jpg");*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: center;*/
+/*}*/
 .imageContainer-gallery-image4{
     grid-area: img-4;
-    background-image: url("image/tiffany_and_co_ring.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    width: 100%;
+    height: 100%;
 }
+/*.imageContainer-gallery-image5{*/
+/*    grid-area: img-5;*/
+/*    background-image: url("image/sea.jpg");*/
+/*    background-size: cover;*/
+/*    background-repeat:no-repeat;*/
+/*    background-position: center;*/
+/*}*/
 .imageContainer-gallery-image5{
     grid-area: img-5;
-    background-image: url("image/sea.jpg");
-    background-size: cover;
-    background-repeat:no-repeat;
-    background-position: center;
+    width: 100%;
+    height: 100%;
 }
+/*.imageContainer-gallery-image6{*/
+/*    grid-area: img-6;*/
+/*    background-image: url("image/guns.jpg");*/
+/*    background-size: cover;*/
+/*}*/
 .imageContainer-gallery-image6{
     grid-area: img-6;
-    background-image: url("image/guns.jpg");
-    background-size: cover;
+    width: 100%;
+    height: 100%;
 }
+/*.imageContainer-gallery-image7{*/
+/*    grid-area: img-7;*/
+/*    background-image: url("image/jocker.jpg");*/
+/*    background-size: cover;*/
+/*}*/
 .imageContainer-gallery-image7{
     grid-area: img-7;
-    background-image: url("image/jocker.jpg");
-    background-size: cover;
+    width: 100%;
+    height: 100%;
 }
 /* ----------------- ----------------------  Footer  ----------------------------------------------------- */
 footer { /* put text in center,text (padding) to boundary 10 pixels,No margin */
@@ -233,7 +297,8 @@ a{ /* Remove the bottom scratch line from all a>href */
     color: #555;
 }
 p{ /* all the achors colors*/
-    color: #555;
+    /*color: #555;*/
+    color: darkorange;
 }
 html{ /* slowly scrolling*/
     scroll-behavior: smooth;
